@@ -1,5 +1,9 @@
 PODS:
+  - AppCenter/Analytics (1.14.0):
+    - AppCenter/Core
   - AppCenter/Core (1.14.0)
+  - AppCenter/Crashes (1.14.0):
+    - AppCenter/Core
   - AppCenterReactNativeShared (1.13.0):
     - AppCenter/Core (= 1.14.0)
   - Base64 (1.1.2)
@@ -55,6 +59,8 @@ PODS:
   - yoga (0.57.8.React)
 
 DEPENDENCIES:
+  - AppCenter/Analytics (~> 1.14.0)
+  - AppCenter/Crashes (~> 1.14.0)
   - AppCenterReactNativeShared (~> 1.13.0)
   - CodePush (from `../node_modules/react-native-code-push`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -106,6 +112,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 41455d4b8d2b6ab93990820b50dc697c2554a322
   yoga: b1ce48b6cf950b98deae82838f5173ea7cf89e85
 
-PODFILE CHECKSUM: 8bba6165ae7726617dc54dd256a8617b2231ae03
+PODFILE CHECKSUM: 4193c9a60392a27bd9b48836ebf7ab8617c0bbc3
 
 COCOAPODS: 1.5.3
