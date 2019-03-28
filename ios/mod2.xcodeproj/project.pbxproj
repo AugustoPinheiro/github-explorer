@@ -369,6 +369,7 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = mod2/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		2353A8EF28ED2B4286F66E5C /* libPods-mod2.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mod2.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B18EB85239C2C26B8F0CE11 /* Pods-mod2.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2.staging.xcconfig"; path = "Pods/Target Support Files/Pods-mod2/Pods-mod2.staging.xcconfig"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3619C98B91FC478185DAD870 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		36A7E92CFB7B4039F3B6D3BA /* Pods-mod2-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mod2-tvOSTests/Pods-mod2-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +402,7 @@
 		D6836E9991F5F8D352D14329 /* Pods-mod2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mod2/Pods-mod2.debug.xcconfig"; sourceTree = "<group>"; };
 		D93FCD3208C647EC85756024 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		E4BCD8C20F78CCAF040E1F69 /* Pods-mod2-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mod2-tvOSTests/Pods-mod2-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E50693BA21E148B6EA2D3708 /* Pods-mod2Tests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2Tests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-mod2Tests/Pods-mod2Tests.staging.xcconfig"; sourceTree = "<group>"; };
 		E5BFA66D109B5D74DBF2D1B7 /* Pods-mod2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mod2Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mod2Tests/Pods-mod2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EA2559E764C0493290AEF110 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
 		F62BCE78790E433C801AC021 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
@@ -570,6 +572,8 @@
 				36A7E92CFB7B4039F3B6D3BA /* Pods-mod2-tvOSTests.release.xcconfig */,
 				E5BFA66D109B5D74DBF2D1B7 /* Pods-mod2Tests.debug.xcconfig */,
 				A1A24816D5EE329006624909 /* Pods-mod2Tests.release.xcconfig */,
+				2B18EB85239C2C26B8F0CE11 /* Pods-mod2.staging.xcconfig */,
+				E50693BA21E148B6EA2D3708 /* Pods-mod2Tests.staging.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -1576,7 +1580,7 @@
 		};
 		AE638048224D46F700348ECB /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3CA158AB6017EAD94C15BEED /* Pods-mod2.release.xcconfig */;
+			baseConfigurationReference = 2B18EB85239C2C26B8F0CE11 /* Pods-mod2.staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1605,7 +1609,7 @@
 		};
 		AE638049224D46F700348ECB /* Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1A24816D5EE329006624909 /* Pods-mod2Tests.release.xcconfig */;
+			baseConfigurationReference = E50693BA21E148B6EA2D3708 /* Pods-mod2Tests.staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
