@@ -10,6 +10,7 @@ import {
   StatusBar,
   AsyncStorage,
   ActivityIndicator,
+  KeyboardAvoidingView,
 } from 'react-native';
 
 import styles from './styles';
@@ -57,7 +58,7 @@ export default class Welcome extends Component {
     const { username, loading, error } = this.state;
 
     return (
-      <View style={styles.container}>
+      <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <StatusBar barStyle="light-content" />
 
         <Text style={styles.title}>Bem-vindo</Text>
@@ -86,7 +87,7 @@ export default class Welcome extends Component {
             )}
           </TouchableOpacity>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     );
   }
 }
