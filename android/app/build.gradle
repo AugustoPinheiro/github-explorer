@@ -123,6 +123,8 @@ android {
 
         releaseStaging {
             buildConfigField "String", "CODEPUSH_KEY", '"K7i954Q4Eu6oBsVGI3jX8OV07DpPS1Oix9cdE"'
+
+            matchingFallbacks = ['debug', 'release']
         }
 
         release {
@@ -130,8 +132,6 @@ android {
 
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-
-            matchingFallbacks = ['debug', 'releaseStaging']
         }
     }
     // applicationVariants are e.g. debug, release
