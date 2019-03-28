@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { AsyncStorage } from 'react-native';
+import CodePush from 'react-native-code-push';
 import '~/config/ReactotronConfig';
 
 import createNavigator from './routes';
 
-export default class App extends Component {
+class App extends Component {
   state = {
     userChecked: false,
     userLogged: false,
@@ -29,3 +30,7 @@ export default class App extends Component {
     return <Routes />;
   }
 }
+
+export default CodePush({
+  checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+})(App);
