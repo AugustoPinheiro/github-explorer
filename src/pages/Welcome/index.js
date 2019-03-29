@@ -63,7 +63,7 @@ export default class Welcome extends Component {
 
         <Text style={styles.title}>Bem-vindo</Text>
         <Text style={styles.text}>
-          Para continuar precisamos que você informe seu usuário no Github.
+          Para continuar precisamos que você informe seu usuário no Github!!!
         </Text>
 
         {error && <Text style={styles.error}>Usuário inexistente.</Text>}
