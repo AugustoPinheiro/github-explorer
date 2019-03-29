@@ -12,12 +12,17 @@ class App extends Component {
     userLogged: false,
   };
 
-  async componentDidMount() {
+  constructor(props) {
+    super(props);
+
     OneSignal.init('08071658-e65f-4aa9-a9a9-f92c2e2c9a26');
 
     OneSignal.addEventListener('received', this.onReceived);
     OneSignal.addEventListener('opened', this.onOpened);
+    OneSignal.addEventListener('ids', this.onIds);
+  }
 
+  async componentDidMount() {
     const username = await AsyncStorage.getItem('@Githuber:username');
 
     this.setState({
@@ -25,6 +30,16 @@ class App extends Component {
       userLogged: !!username,
     });
   }
+
+  componentWillUnmount() {
+    OneSignal.removeEventListener('received', this.onReceived);
+    OneSignal.removeEventListener('opened', this.onOpened);
+    OneSignal.removeEventListener('ids', this.onIds);
+  }
+
+  onIds = (device) => {
+    console.log('Device info: ', device);
+  };
 
   onReceived = (notification) => {
     console.log('Notification received: ', notification);
@@ -36,11 +51,6 @@ class App extends Component {
     console.log('isActive: ', openResult.notification.isAppInFocus);
     console.log('openResult: ', openResult);
   };
-
-  componentWillUnmount() {
-    OneSignal.removeEventListener('received', this.onReceived);
-    OneSignal.removeEventListener('opened', this.onOpened);
-  }
 
   render() {
     const { userChecked, userLogged } = this.state;
